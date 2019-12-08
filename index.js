@@ -1,4 +1,4 @@
-import _ from 'lodash'
+const _ = require('lodash')
 /**
  * get multiple positions if you set [] in path for loadash
  * @param {*} item input object or array
@@ -46,4 +46,4 @@ const getPositions = function getPositions(item, position) {
   return positions;
 };
 
-export {getPositions} ;
+module.exports =  {getPositions} ;
