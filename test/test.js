@@ -61,4 +61,4 @@ var input ={
       }
   ]
 }
-console.log(getPositions(input,["[*]"]));
+console.log(getPositions(input,["asdf"]));
