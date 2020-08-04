@@ -11,7 +11,7 @@ npm install lodash-bzextras
 
 ### getPositions
 
-get multiple positions of items if there is [] in the path (means all items in array)
+get multiple positions of items if there is [] or [*] in the path (means all items in array or object)
 
 ```javaScript
     var {getPositions} = require('lodash-bzextras');
@@ -59,6 +59,18 @@ get multiple positions of items if there is [] in the path (means all items in a
             "key3[0].test[2].test4",
             "key3[1].test[3].test4",
         ]
+     * */
+    var path = "[*]";
+    var result = getPositions(input, path);
+    /**
+        result = [ 'key1', 'key2', 'key3' ],
+        
+     * */
+    var path = "[*][]";
+    var result = getPositions(input, path);
+    /**
+        result = [ 'key3[0]', 'key3[1]' ],
+        
      * */
 
 ```

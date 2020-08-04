@@ -1,5 +1,5 @@
 const _ = require("lodash");
-const { getPositions,getPos } = require("../index");
+const { getPositions } = require("../index");
 var test = [{
   a: {
     a: [
@@ -26,4 +26,39 @@ var test = [{
     },
   },
 }];
-console.log(getPos(test,["[*][*]"]));
+var input ={
+  key1: 'string',
+  key2: 'any',
+  key3:[
+      {
+          test:[
+          {
+              test2:'string'
+          },
+          {
+              test3:'string'
+          },
+          {
+              test4:'string'
+          },
+          ]
+      },
+      {
+          test:[
+          {
+              test1:'string'
+          },
+          {
+              test2:'string'
+          },
+          {
+              test3:'string'
+          },
+          {
+              test4:'string'
+          },
+          ]
+      }
+  ]
+}
+console.log(getPositions(input,["[*]"]));
